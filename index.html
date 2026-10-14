@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriTrack Wireframe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="blueprint.css?v=1" />
+  </head>
+  <body class="auth-mode">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">A</div>
+          <div class="brand-text">
+            <h1>AgriTrack</h1>
+            <span>ATI MIMAROPA</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" id="client-nav">
+          <div class="nav-label">WORKSPACE</div>
+          <button class="nav-item active" data-view="requests">
+            <span class="icon">◫</span>
+            <span>Supply requests</span>
+          </button>
+          <button class="nav-item" data-view="distribution">
+            <span class="icon">⏱</span>
+            <span>Distribution</span>
+          </button>
+          <button class="nav-item" data-view="profile">
+            <span class="icon">◌</span>
+            <span>My profile</span>
+          </button>
+        </nav>
+
+        <nav class="main-nav approver-nav" id="approver-nav">
+          <div class="nav-label">WORKSPACE</div>
+          <button class="nav-item" data-view="dashboard">
+            <span class="icon">▦</span>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-view="approver-requests">
+            <span class="icon">▤</span>
+            <span>Supply requests</span>
+          </button>
+          <button class="nav-item" data-view="approver-distribution">
+            <span class="icon">▣</span>
+            <span>Distribution</span>
+          </button>
+          <button class="nav-item" data-view="analytics">
+            <span class="icon">⌁</span>
+            <span>AI analytics</span>
+          </button>
+          <button class="nav-item" data-view="reports">
+            <span class="icon">▧</span>
+            <span>Reports</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="viewing-as">Viewing as</div>
+          <button class="role-select" type="button">
+            <span>Client</span>
+            <span class="caret">⌄</span>
+          </button>
+          <button class="signout">✓ Sign out</button>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <section class="view active" id="auth-view">
+          <div class="auth-bg">
+            <div class="auth-card">
+              <div class="brand-inline">
+                <div class="brand-mark small">A</div>
+                <div class="brand-text small">
+                  <h2>AgriTrack</h2>
+                  <span>ATI MIMAROPA</span>
+                </div>
+              </div>
+
+              <div class="auth-panel">
+                <div class="eyebrow">SECURE PORTAL</div>
+                <h3>Welcome back</h3>
+                <p>Sign in to monitor agricultural supply distribution.</p>
+
+                <label class="field-label">Email address</label>
+                <input type="text" value="name@ati.gov.ph" />
+
+                <label class="field-label">Password</label>
+                <input type="password" value="Enter your password" />
+
+                <label class="field-label">Sign in as</label>
+                <select>
+                  <option>Client</option>
+                </select>
+
+                <label class="checkbox-row">
+                  <input type="checkbox" />
+                  <span>I agree to the Data Privacy Act (RA 10173) notice</span>
+                </label>
+
+                <button class="primary-btn large">Sign in</button>
+                <div class="footnote">Prototype mode: any email and password works.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="distribution-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Client</div>
+            <div class="header-actions">
+              <div class="client-pill">Client</div>
+              <button class="icon-button">◐</button>
+            </div>
+          </div>
+          <div class="screen-header">
+            <h2>Distribution records</h2>
+            <p>Recipient verification is tracked separately from delivery status</p>
+          </div>
+
+          <div class="records-board">
+            <div class="table-head">
+              <span>Reference</span>
+              <span>Supply type</span>
+              <span>Quantity</span>
+              <span>Date</span>
+              <span>Recipient / center or farm</span>
+              <span>Delivery</span>
+              <span>Verification</span>
+              <span>Actions</span>
+            </div>
+
+            <div class="table-row">
+              <div class="ref">DEL-249</div>
+              <div class="name"><strong>Vegetable seed kit</strong></div>
+              <div class="qty">25</div>
+              <div class="date">Jun 17, 2025</div>
+              <div class="recipient">
+                <strong>Maria T.</strong>
+                <span>Cruz<br />Rombion Training Center</span>
+              </div>
+              <div class="tag blue">In transit</div>
+              <div class="tag teal">Awaiting recipient</div>
+              <button class="action success">Confirm receipt</button>
+            </div>
+
+            <div class="table-row">
+              <div class="ref">DEL-245</div>
+              <div class="name"><strong>Knapsack sprayer</strong></div>
+              <div class="qty">10</div>
+              <div class="date">Jun 12, 2025</div>
+              <div class="recipient">
+                <strong>Joel M.</strong>
+                <span>Reyes<br />Palawan Learning Site</span>
+              </div>
+              <div class="tag green">Delivered</div>
+              <div class="tag green">Verified</div>
+              <button class="action ghost">No action</button>
+            </div>
+
+            <div class="table-row">
+              <div class="ref">DEL-241</div>
+              <div class="name"><strong>Organic fertilizer</strong></div>
+              <div class="qty">36</div>
+              <div class="date">Jun 10, 2025</div>
+              <div class="recipient">
+                <strong>Ana L. Dela</strong>
+                <span>Rosa<br />Marinduque Provincial Center</span>
+              </div>
+              <div class="tag green">Delivered</div>
+              <div class="tag red">Flagged</div>
+              <button class="action ghost">No action</button>
+            </div>
+          </div>
+
+          <div class="report-box">
+            <h3>Report a discrepancy</h3>
+            <p>Tell the supply team what was missing, damaged or different.</p>
+            <label>Details</label>
+            <textarea placeholder="Reference number and issue"></textarea>
+            <button class="report-btn">Report discrepancy</button>
+          </div>
+        </section>
+
+        <section class="view" id="requests-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Client</div>
+            <div class="header-actions">
+              <div class="client-pill">Client</div>
+              <button class="icon-button">◐</button>
+            </div>
+          </div>
+
+          <div class="request-form panel">
+            <div class="request-header">
+              <h2>New request</h2>
+              <p>Request supplies for Occidental Mindoro Demo Farm</p>
+            </div>
+
+            <div class="request-grid">
+              <div class="input-group">
+                <label>Supply</label>
+                <select>
+                  <option>Certified rice seeds</option>
+                </select>
+              </div>
+              <div class="input-group quantity-group">
+                <label>Quantity</label>
+                <input type="text" value="50" />
+              </div>
+              <button class="primary-btn request-submit">Submit request</button>
+            </div>
+          </div>
+
+          <div class="requests-table panel">
+            <h3>My requests</h3>
+            <p class="muted">4 requests shown</p>
+
+            <div class="mini-table">
+              <div class="mini-head">
+                <span>Request</span>
+                <span>Center or farm</span>
+                <span>Supply</span>
+                <span>Requested</span>
+                <span>Approved</span>
+                <span>Status</span>
+                <span>Actions</span>
+              </div>
+
+              <div class="mini-row">
+                <div class="request-code">REQ-1048</div>
+                <div class="farm-name">Occidental Mindoro Demo Farm</div>
+                <div class="supply">Certified rice seeds</div>
+                <div>80</div>
+                <div>—</div>
+                <div><span class="tag warning">Pending</span></div>
+                <div class="text-muted">No action</div>
+              </div>
+
+              <div class="mini-row">
+                <div class="request-code">REQ-1047</div>
+                <div class="farm-name">Marinduque Provincial Center</div>
+                <div class="supply">Organic fertilizer</div>
+                <div>40</div>
+                <div>36</div>
+                <div><span class="tag success">Approved</span></div>
+                <div class="text-muted">No action</div>
+              </div>
+
+              <div class="mini-row">
+                <div class="request-code">REQ-1044</div>
+                <div class="farm-name">Rombion Training Center</div>
+                <div class="supply">Vegetable seed kit</div>
+                <div>25</div>
+                <div>25</div>
+                <div><span class="tag pending-alt">Ready to distribute</span></div>
+                <div class="text-muted">No action</div>
+              </div>
+
+              <div class="mini-row">
+                <div class="request-code">REQ-1039</div>
+                <div class="farm-name">Palawan Learning Site</div>
+                <div class="supply">Knapsack sprayer</div>
+                <div>12</div>
+                <div>10</div>
+                <div><span class="tag success">Distributed</span></div>
+                <div class="text-muted">No action</div>
+              </div>
+            </div>
+
+            <div class="table-footer">
+              <span>Continue prototype flow</span>
+              <button class="view-switch" type="button" data-switch-role="approver">Switch to Approver view</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="profile-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Client</div>
+            <div class="header-actions">
+              <div class="client-pill">Client</div>
+              <button class="icon-button">◐</button>
+            </div>
+          </div>
+
+          <div class="profile-card panel">
+            <div class="panel-header">
+              <h2>My profile</h2>
+              <p>Keep your organization details up to date</p>
+            </div>
+
+            <div class="profile-form">
+              <div class="avatar-badge">ES</div>
+              <h3>Client profile</h3>
+              <p>This information appears on requests and delivery receipts.</p>
+
+              <label>Name</label>
+              <input type="text" value="Elena Santos" />
+
+              <label>Center or farm</label>
+              <input type="text" value="Occidental Mindoro Demo Farm" />
+
+              <label>Location</label>
+              <input type="text" value="San Jose, Occidental Mindoro" />
+
+              <button class="primary-btn save-profile">Save profile</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="view approver-view" id="dashboard-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Approver</div>
+            <div class="header-actions">
+              <div class="client-pill">Approver</div>
+              <button class="icon-button" type="button" aria-label="Toggle theme">☼</button>
+            </div>
+          </div>
+          <div class="screen-header">
+            <h2>Dashboard</h2>
+            <p>A live view of supply movement across MIMAROPA</p>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card metric-yellow">
+              <div>Requests waiting <span>●</span></div>
+              <strong>14</strong>
+              <small>6 need approval</small>
+            </article>
+            <article class="metric-card metric-red">
+              <div>At or below threshold <span>●</span></div>
+              <strong>8</strong>
+              <small>2 critical items</small>
+            </article>
+            <article class="metric-card metric-green">
+              <div>Deliveries completed <span>●</span></div>
+              <strong>126</strong>
+              <small>This quarter</small>
+            </article>
+            <article class="metric-card metric-blue">
+              <div>Discrepancies flagged <span>●</span></div>
+              <strong>3</strong>
+              <small>Awaiting review</small>
+            </article>
+          </div>
+
+          <div class="stock-alert">
+            <div class="alert-icon">△</div>
+            <div class="alert-copy">
+              <strong>Low-stock action needed</strong>
+              <span>Organic fertilizer is down to 18 bags, below the threshold of 25.</span>
+            </div>
+            <button class="alert-button" type="button" data-go-view="reports">Review inventory</button>
+          </div>
+
+          <div class="approver-panel panel progress-panel">
+            <div class="panel-title-row">
+              <div>
+                <h3>Distribution progress</h3>
+                <p>Current fulfillment by connected center and farm</p>
+              </div>
+              <select aria-label="Distribution period">
+                <option>This quarter</option>
+              </select>
+            </div>
+            <div class="data-head progress-grid">
+              <span>Center or farm</span><span>Requested</span><span>Approved</span><span>Allocated</span><span>Distributed</span><span>Progress</span>
+            </div>
+            <div class="data-row progress-grid">
+              <strong>Marinduque Provincial Center</strong><span>142</span><span>132</span><span>120</span><span>108</span><span class="progress-value"><i><b style="width:82%"></b></i>82%</span>
+            </div>
+            <div class="data-row progress-grid">
+              <strong>Occidental Mindoro Demo Farm</strong><span>96</span><span>88</span><span>72</span><span>64</span><span class="progress-value"><i><b style="width:73%"></b></i>73%</span>
+            </div>
+            <div class="data-row progress-grid">
+              <strong>Romblon Training Center</strong><span>78</span><span>74</span><span>74</span><span>69</span><span class="progress-value"><i><b style="width:93%"></b></i>93%</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="view approver-view" id="approver-requests-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Approver</div>
+            <div class="header-actions"><div class="client-pill">Approver</div><button class="icon-button" type="button" aria-label="Toggle theme">☼</button></div>
+          </div>
+          <div class="screen-header">
+            <h2>Supply requests</h2>
+            <p>Review and manage agricultural supply requests</p>
+          </div>
+          <div class="approver-panel panel">
+            <div class="table-intro"><h3>All supply requests</h3><p>4 requests shown</p></div>
+            <div class="data-head request-grid-table">
+              <span>Request</span><span>Center or farm</span><span>Supply</span><span>Requested</span><span>Approved</span><span>Status</span><span>Actions</span>
+            </div>
+            <div class="data-row request-grid-table request-approval-row">
+              <span class="request-code">REQ-1048</span><strong>Occidental Mindoro Demo Farm</strong><span>Certified rice seeds</span><span>80</span><input aria-label="Approved quantity for REQ-1048" value="80" /><span class="tag warning">Pending</span><span class="approval-actions"><button type="button" class="action-button approve">Approve</button><button type="button" class="action-button reject">Reject</button></span>
+            </div>
+            <div class="data-row request-grid-table request-approval-row">
+              <span class="request-code">REQ-1047</span><strong>Marinduque Provincial Center</strong><span>Organic fertilizer</span><span>40</span><span>36</span><span class="tag success">Approved</span><button type="button" class="action-button approve">Approve allocation</button>
+            </div>
+            <div class="data-row request-grid-table request-approval-row">
+              <span class="request-code">REQ-1044</span><strong>Romblon Training Center</strong><span>Vegetable seed kit</span><span>25</span><span>25</span><span class="tag pending-alt">Ready to distribute</span><span class="text-muted">No action</span>
+            </div>
+            <div class="data-row request-grid-table request-approval-row">
+              <span class="request-code">REQ-1039</span><strong>Palawan Learning Site</strong><span>Knapsack sprayer</span><span>12</span><span>10</span><span class="tag success">Distributed</span><span class="text-muted">No action</span>
+            </div>
+            <div class="table-footer"><span>Continue prototype flow</span><button class="view-switch" type="button" data-switch-role="client">Switch to Client view</button></div>
+          </div>
+        </section>
+
+        <section class="view approver-view" id="approver-distribution-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Approver</div>
+            <div class="header-actions"><div class="client-pill">Approver</div><button class="icon-button" type="button" aria-label="Toggle theme">☼</button></div>
+          </div>
+          <div class="screen-header"><h2>Distribution</h2><p>Track deliveries and confirm recipient handover</p></div>
+          <div class="approver-panel panel">
+            <div class="table-intro"><h3>Distribution records</h3><p>Recipient verification is tracked separately from delivery status</p></div>
+            <div class="data-head distribution-grid">
+              <span>Reference</span><span>Supply type</span><span>Quantity</span><span>Date</span><span>Recipient / center or farm</span><span>Delivery</span><span>Verification</span><span>Actions</span>
+            </div>
+            <div class="data-row distribution-grid distribution-row">
+              <span class="request-code">DEL-249</span><strong>Vegetable seed kit</strong><span>25</span><span>Jun 17, 2025</span><span>Maria T. Cruz<small>Romblon Training Center</small></span><span class="tag blue">In transit</span><span class="tag blue">Awaiting recipient</span><span class="text-muted">View only</span>
+            </div>
+            <div class="data-row distribution-grid distribution-row">
+              <span class="request-code">DEL-245</span><strong>Knapsack sprayer</strong><span>10</span><span>Jun 12, 2025</span><span>Joel M. Reyes<small>Palawan Learning Site</small></span><span class="tag success">Delivered</span><span class="tag success">Verified</span><span class="text-muted">View only</span>
+            </div>
+            <div class="data-row distribution-grid distribution-row">
+              <span class="request-code">DEL-241</span><strong>Organic fertilizer</strong><span>36</span><span>Jun 10, 2025</span><span>Ana L. Dela Rosa<small>Marinduque Provincial Center</small></span><span class="tag success">Delivered</span><span class="tag red">Flagged</span><span class="text-muted">View only</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="view approver-view" id="analytics-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Approver</div>
+            <div class="header-actions"><div class="client-pill">Approver</div><button class="icon-button" type="button" aria-label="Toggle theme">☼</button></div>
+          </div>
+          <div class="screen-header"><h2>AI analytics</h2><p>AI-assisted forecasts based on current distribution patterns</p></div>
+          <div class="analytics-banner">
+            <div class="analytics-heading"><span class="ai-mark">AI</span><div><h3>Distribution patterns</h3><p>Generated from approved requests and recorded distributions</p></div></div>
+            <div class="insight-grid">
+              <article><small>Top center</small><strong>Marinduque Provincial</strong><span>132 approved items</span></article>
+              <article><small>Most requested supply</small><strong>Certified rice seeds</strong><span>38% of all requests</span></article>
+              <article><small>Flagged discrepancies</small><strong>3 open reports</strong><span>Down 25% this month</span></article>
+            </div>
+          </div>
+          <div class="approver-panel panel forecast-panel">
+            <div class="table-intro"><h3>Next-month forecast</h3><p>Planning suggestions are advisory and should be reviewed by supply staff.</p></div>
+            <div class="data-head forecast-grid"><span>Supply</span><span>Requested so far</span><span>Predicted next month</span><span>In stock</span><span>Recommendation</span></div>
+            <div class="data-row forecast-grid"><strong>Certified rice seeds</strong><span>320 bags</span><span>365 bags</span><span>410 bags</span><span class="tag success">Stock sufficient</span></div>
+            <div class="data-row forecast-grid"><strong>Organic fertilizer</strong><span>184 bags</span><span>230 bags</span><span>18 bags</span><span class="tag red">Reorder now</span></div>
+            <div class="data-row forecast-grid"><strong>Vegetable seed kit</strong><span>96 kits</span><span>112 kits</span><span>64 kits</span><span class="tag pending-alt">Plan replenishment</span></div>
+          </div>
+        </section>
+
+        <section class="view approver-view" id="reports-view">
+          <div class="topbar">
+            <div class="crumbs">ATI MIMAROPA • Approver</div>
+            <div class="header-actions"><div class="client-pill">Approver</div><button class="icon-button" type="button" aria-label="Toggle theme">☼</button></div>
+          </div>
+          <div class="screen-header"><h2>Reports</h2><p>Printable summaries and exportable operational data</p></div>
+          <div class="report-toolbar">
+            <div><h3>Quarterly operations report</h3><p>April 1–June 30, 2025 · All MIMAROPA locations</p></div>
+            <div><button type="button" class="export-button">↓ Export CSV</button><button type="button" class="action-button approve">▣ Print report</button></div>
+          </div>
+          <div class="approver-panel panel report-table">
+            <div class="table-intro"><h3>Inventory balance</h3></div>
+            <div class="data-head inventory-grid"><span>Supply</span><span>Opening balance</span><span>Stock in</span><span>Stock out</span><span>Current balance</span></div>
+            <div class="data-row inventory-grid"><strong>Certified rice seeds</strong><span>290</span><span>240</span><span>120</span><strong>410 bags</strong></div>
+            <div class="data-row inventory-grid"><strong>Organic fertilizer</strong><span>128</span><span>80</span><span>190</span><strong class="critical-stock">18 bags</strong></div>
+            <div class="data-row inventory-grid"><strong>Vegetable seed kit</strong><span>72</span><span>60</span><span>68</span><strong>64 kits</strong></div>
+          </div>
+          <div class="approver-panel panel report-table">
+            <div class="table-intro"><h3>Request status summary</h3></div>
+            <div class="data-head status-grid"><span>Status</span><span>Number of requests</span><span>Total items</span><span>Share</span></div>
+            <div class="data-row status-grid"><span class="tag warning">Pending</span><span>14</span><span>186</span><span class="progress-value"><i><b style="width:18%"></b></i>18%</span></div>
+            <div class="data-row status-grid"><span class="tag success">Approved</span><span>32</span><span>482</span><span class="progress-value"><i><b style="width:42%"></b></i>42%</span></div>
+            <div class="data-row status-grid"><span class="tag blue">Distributed</span><span>30</span><span>406</span><span class="progress-value"><i><b style="width:40%"></b></i>40%</span></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast">✓ Switched to Client view <span>✕</span></div>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>

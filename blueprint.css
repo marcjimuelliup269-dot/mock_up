@@ -1,0 +1,89 @@
+body.blueprint-mode {
+  background: #fff;
+  color: #111;
+}
+
+body.blueprint-mode *,
+body.blueprint-mode *::before,
+body.blueprint-mode *::after {
+  color: #111 !important;
+  border-color: #111 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body.blueprint-mode .app-shell,
+body.blueprint-mode .content-area,
+body.blueprint-mode .view,
+body.blueprint-mode .auth-bg {
+  background: #fff !important;
+}
+
+body.blueprint-mode .sidebar,
+body.blueprint-mode .profile-form,
+body.blueprint-mode .role-select,
+body.blueprint-mode .metric-card,
+body.blueprint-mode .stock-alert,
+body.blueprint-mode .analytics-banner,
+body.blueprint-mode .insight-grid article {
+  background: #f1f1f1 !important;
+}
+
+body.blueprint-mode .records-board,
+body.blueprint-mode .panel,
+body.blueprint-mode .report-box,
+body.blueprint-mode .request-form,
+body.blueprint-mode .requests-table,
+body.blueprint-mode .auth-panel {
+  background: #fff !important;
+}
+
+body.blueprint-mode .brand-mark,
+body.blueprint-mode .avatar-badge,
+body.blueprint-mode .ai-mark,
+body.blueprint-mode .alert-icon,
+body.blueprint-mode .tag,
+body.blueprint-mode .client-pill,
+body.blueprint-mode .action,
+body.blueprint-mode .action-button,
+body.blueprint-mode .alert-button,
+body.blueprint-mode .report-btn,
+body.blueprint-mode .primary-btn,
+body.blueprint-mode .nav-item.active {
+  background: #e5e5e5 !important;
+}
+
+body.blueprint-mode .blueprint-placeholder,
+body.blueprint-mode .blueprint-role::after {
+  display: inline-block;
+  height: 0.62em;
+  border: 1px solid #777;
+  border-radius: 2px;
+  background: #bcbcbc;
+  vertical-align: middle;
+}
+
+body.blueprint-mode .blueprint-placeholder {
+  width: var(--placeholder-width);
+}
+
+body.blueprint-mode .blueprint-role {
+  font-size: 0;
+}
+
+body.blueprint-mode .blueprint-role::after {
+  width: 4em;
+  content: "";
+}
+
+body.blueprint-mode .progress-value i {
+  background: #e5e5e5 !important;
+}
+
+body.blueprint-mode .progress-value b {
+  background: #aaa !important;
+}
+
+body.blueprint-mode .toast {
+  background: #f1f1f1 !important;
+}
